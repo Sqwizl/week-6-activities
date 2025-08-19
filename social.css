@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    background-color: var(--grey-900);
+    color: var(--white);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 16px;
+    margin: auto;
+}
+
+.profile {
+    background-color: var(--grey-800);
+    border-radius: 8px;
+    padding: 24px;
+    width: 360px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: visible;
+    margin-bottom: 16px;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.location {
+    color: var(--green);
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.bio {
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--grey-700);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    margin: 8px;
+    padding: 8px;
+
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+    padding: 8px;
+}
+
+.btn:active {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+    .card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.bio {
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+}
+
+.btn {
+    padding: 0.7rem;
+    font-size: 14px;
+}
