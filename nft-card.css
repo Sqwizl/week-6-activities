@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --blue-950: hsl(217, 54%, 11%);
+    --blue-900: hsl(216, 50%, 16%);
+    --blue-800: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--blue-950);
+    color: var(--blue-500);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background-color: var(--blue-900);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s;
+}
+
+/*Image*/
+.card-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.card-image:hover .overlay {
+    opacity: 1;
+}
+
+/* Title and Description*/
+.card-title {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: var(--cyan-400);
+    cursor: pointer;
+}
+
+.card-description {
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/*Stats*/
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: var(--cyan-400);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blue-500);
+}
+
+/* Divider*/
+hr {
+    border: none;
+    border-bottom: 1px solid var(--blue-800);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card-footer p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--blue-500);
+}
+
+.card-footer span {
+    color: var(--white);
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.card-footer span:hover {
+    color: var(--cyan-400);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*DESKTOP*/
+@media (min-width: 1440px) {
+    body {
+        padding: 0;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+}
